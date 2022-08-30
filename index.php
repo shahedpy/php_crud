@@ -11,8 +11,10 @@
 <body>
     <div class="container">
         <form action="php/create.php" method="POST">
-            <input type="text" name="" id="">
-            <input type="email" name="" id="">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" name="" id="">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" name="" id="">
         </form>
     </div>
 </body>
