@@ -12,10 +12,16 @@
     <div class="container">
         <form action="php/create.php" method="POST">
             <h4 class="display-4 text-center">Create</h4><hr><br>
-            <label for="name">Name</label>
-            <input type="text" class="form-control" name="" id="">
-            <label for="email">Email</label>
-            <input type="email" class="form-control" name="" id="">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" name="name" placeholder="Enter name">
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" name="email" placeholder="Enter email">
+            </div>
+            <button class="btn btn-primary">Create</button>
+            <a href="#" class="link-primary">View</a>
         </form>
     </div>
 </body>
