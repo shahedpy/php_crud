@@ -20,7 +20,7 @@
                 <label for="email">Email</label>
                 <input type="email" class="form-control" name="email" placeholder="Enter email">
             </div>
-            <button class="btn btn-primary">Create</button>
+            <button type="submit" name="create" class="btn btn-primary">Create</button>
             <a href="#" class="link-primary">View</a>
         </form>
     </div>
