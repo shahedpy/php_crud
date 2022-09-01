@@ -12,13 +12,19 @@
     <div class="container">
         <form action="php/create.php" method="POST">
             <h4 class="display-4 text-center">Create</h4><hr><br>
+            <?php if(isset($_GET['error'])){
+                ?>
+                <div class="alert alert-danger"><?= $_GET['error'] ?></div>
+                <?php
+            }
+            ?>
             <div class="form-group">
                 <label for="name">Name</label>
-                <input type="text" class="form-control" name="name" placeholder="Enter name">
+                <input type="text" class="form-control" name="name" placeholder="Enter name" value="<?php echo isset($_GET['name'])?$_GET['name']:''?>">
             </div>
             <div class="form-group">
                 <label for="email">Email</label>
-                <input type="email" class="form-control" name="email" placeholder="Enter email">
+                <input type="email" class="form-control" name="email" placeholder="Enter email" value="<?php echo isset($_GET['email'])?$_GET['email']:''?>">
             </div>
             <button type="submit" name="create" class="btn btn-primary">Create</button>
             <a href="#" class="link-primary">View</a>
