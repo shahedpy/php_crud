@@ -20,12 +20,12 @@ if(isset($_POST['create'])){
     } elseif(empty($email)){
         header("Location: ../index.php?error=Email is required&$user_data");
     } else {
-        $sql = "INSERT INTO users(name,email) VALUES($name,$email)";
+        $sql = "INSERT INTO users(name,email) VALUES('$name','$email')";
         $result = mysqli_query($conn,$sql);
         if($result){
-            header("Location: ../read.php?success");
+            header("Location: ../read.php?success=Successfully created");
         } else {
-            header("Location: ../read.php?error=Unknown error occurred&$user_data");
+            header("Location: ../index.php?error=Unknown error occurred&$user_data");
         }
     }
     
