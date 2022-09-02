@@ -1,3 +1,4 @@
+<?php include 'php/read.php' ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,7 +18,40 @@
                 <div class="alert alert-success"><?= $_GET['success'] ?></div>
                 <?php
             } ?>
-            
+
+            <?php if(mysqli_num_rows($result)){
+                ?>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php
+                        $i = 0;
+                        while($rows = mysqli_fetch_assoc($result)){
+                            $i++;
+                            ?>
+                            <tr>
+                                <th scope="row"><?= $i ?></th>
+                                <td><?= $rows['name'] ?></td>
+                                <td><?= $rows['email'] ?></td>
+                                <td>
+                                    <a href="php/update.php" class="btn btn-success">Update</a>
+                                    <a href="php/delete.php" class="btn btn-danger">Delete</a>
+                                </td>
+                            </tr>
+                            <?php
+                        }
+                        ?>
+                    </tbody>
+                </table>
+                <?php
+            }?>
         </div>
     </div>
 </body>
