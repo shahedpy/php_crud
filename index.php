@@ -27,7 +27,7 @@
                 <input type="email" class="form-control" name="email" placeholder="Enter email" value="<?php echo isset($_GET['email'])?$_GET['email']:''?>">
             </div>
             <button type="submit" name="create" class="btn btn-primary">Create</button>
-            <a href="#" class="link-primary">View</a>
+            <a href="read.php" class="link-primary">View</a>
         </form>
     </div>
 </body>
