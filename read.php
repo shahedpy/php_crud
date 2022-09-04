@@ -51,7 +51,10 @@
                     </tbody>
                 </table>
                 <?php
-            }?>
+            } ?>
+            <div class="link-right">
+                <a href="index.php" class="link-primary">Create</a>
+            </div>
         </div>
     </div>
 </body>
