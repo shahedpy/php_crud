@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    
+    <div class="container">
+        <form action="php/update.php">
+            <h4 class="display-4 text-center">Update</h4><hr><br>
+        </form>
+    </div>
 </body>
 </html>
