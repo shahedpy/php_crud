@@ -24,9 +24,10 @@ if(isset($_GET['id'])) {
 } elseif(isset($_POST['update'])){
 
     include '../db_conn.php';
-
-
-    echo 'submitted';
+    
+    function validate(){
+        
+    }
 
 }
 else {
