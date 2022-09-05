@@ -1,3 +1,5 @@
+<?php include 'php/update.php'; ?>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,8 +11,18 @@
 </head>
 <body>
     <div class="container">
-        <form action="php/update.php">
+        <form action="php/update.php" method="POST">
             <h4 class="display-4 text-center">Update</h4><hr><br>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" value="<?= $row['name'] ?>">
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="text" class="form-control" value="<?= $row['email'] ?>">
+            </div>
+            <button class="btn btn-primary" type="submit" name="update">Update</button>
+            <a href="read.php" class="">View</a>
         </form>
     </div>
 </body>
