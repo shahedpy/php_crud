@@ -13,7 +13,13 @@
     <div class="container">
         <form action="php/update.php" method="POST">
             <h4 class="display-4 text-center">Update</h4><hr><br>
-            
+            <?php
+            if(isset($_GET['error'])){
+                ?>
+                <div class="alert alert-danger"><?= $_GET['error'] ?></div>
+                <?php
+            }
+            ?>
             <div class="form-group">
                 <label for="name">Name</label>
                 <input type="text" name="name" class="form-control" value="<?= $row['name'] ?>">
