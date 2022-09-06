@@ -25,8 +25,23 @@ if(isset($_GET['id'])) {
 
     include '../db_conn.php';
     
-    function validate(){
-        
+    function validate($data){
+        $data = trim($data);
+        $data = stripslashes($data);
+        $data = htmlspecialchars($data);
+        return $data;
+    }
+
+    $name = validate($_POST['name']);
+    $email = validate($_POST['email']);
+    $id = validate($_POST['id']);
+
+    if(empty($name)){
+        header("Location: ../update.php?id=$id&error=Name is required");
+    } elseif(empty($email)){
+        header("Location: ../update.php?id=$id&error=Email is required");
+    } else {
+
     }
 
 }
