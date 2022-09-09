@@ -41,6 +41,16 @@ if(isset($_GET['id'])) {
     } elseif(empty($email)){
         header("Location: ../update.php?id=$id&error=Email is required");
     } else {
+        $sql = "UPDATE users SET name='$name', email='$email' WHERE id=$id";
+
+        $result = mysqli_query($conn, $sql);
+
+        if($result){
+            header("Location: ../read.php?success=Updated successfully");
+        } else {
+            header("Location: ../read.php?id=$id&error=Unknown error occurred&$userdata");
+        }
+
 
     }
 
