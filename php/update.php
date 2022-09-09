@@ -48,7 +48,7 @@ if(isset($_GET['id'])) {
         if($result){
             header("Location: ../read.php?success=Updated successfully");
         } else {
-            header("Location: ../read.php?id=$id&error=Unknown error occurred&$userdata");
+            header("Location: ../read.php?id=$id&error=Unknown error occurred&$user_data");
         }
 
 

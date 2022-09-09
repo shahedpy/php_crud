@@ -42,7 +42,7 @@
                                 <td><?= $rows['email'] ?></td>
                                 <td>
                                     <a href="update.php?id=<?= $rows['id'] ?>" class="btn btn-success">Update</a>
-                                    <a href="delete.php?id=<?= $rows['id'] ?>" class="btn btn-danger">Delete</a>
+                                    <a href="php/delete.php?id=<?= $rows['id'] ?>" class="btn btn-danger">Delete</a>
                                 </td>
                             </tr>
                             <?php
